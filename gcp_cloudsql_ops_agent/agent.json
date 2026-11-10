@@ -1,0 +1,89 @@
+{
+  "name": "GCP Cloud SQL Operations Agent",
+  "description": "Google Cloud SQL Operations Agent with instance and user inspection, read-only SQL diagnostics, Cloud Logging & Monitoring observability, and official GCP Knowledge lookup.",
+  "version": "1.0.0",
+  "capabilities": {
+    "streaming": true,
+    "pushNotifications": false
+  },
+  "securitySchemes": {
+    "bearer": {
+      "httpAuthSecurityScheme": {
+        "scheme": "Bearer"
+      }
+    }
+  },
+  "securityRequirements": [
+    {
+      "schemes": {
+        "bearer": {
+          "list": []
+        }
+      }
+    }
+  ],
+  "defaultInputModes": [
+    "text/plain",
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "text/plain",
+    "application/json"
+  ],
+  "skills": [
+    {
+      "id": "cloudsql_instance_operations",
+      "name": "Cloud SQL Instance & Read-Only Query Diagnostics",
+      "description": "Lists and inspects Google Cloud SQL instances, database users, operations, upgrade prechecks, and executes read-only diagnostic queries.",
+      "tags": [
+        "gcp",
+        "cloud-sql",
+        "sql",
+        "postgres",
+        "mysql",
+        "database"
+      ],
+      "examples": [
+        "List all Cloud SQL instances in the project and inspect their configuration and state",
+        "List users and recent operations for a Cloud SQL instance"
+      ]
+    },
+    {
+      "id": "gcp_cloud_observability",
+      "name": "GCP Cloud Logging & Monitoring Diagnostics",
+      "description": "Queries Cloud Logging entries and Cloud Monitoring time-series metrics and alerts for Cloud SQL databases.",
+      "tags": [
+        "gcp",
+        "logging",
+        "monitoring",
+        "observability",
+        "metrics",
+        "alerts"
+      ],
+      "examples": [
+        "Check recent Cloud SQL error logs and CPU/memory/connection utilization metrics"
+      ]
+    },
+    {
+      "id": "gcp_knowledge_best_practices",
+      "name": "GCP Documentation & Best Practices Lookup",
+      "description": "Searches official Google Cloud documentation and architecture guides for Cloud SQL best practices.",
+      "tags": [
+        "gcp",
+        "documentation",
+        "knowledge",
+        "best-practices"
+      ],
+      "examples": [
+        "What are the official GCP best practices for Cloud SQL high availability and connection pooling?"
+      ]
+    }
+  ],
+  "supportedInterfaces": [
+    {
+      "url": "https://localhost:8080",
+      "protocolBinding": "JSONRPC",
+      "protocolVersion": "1.0"
+    }
+  ]
+}
